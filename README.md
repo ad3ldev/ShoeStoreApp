@@ -16,6 +16,8 @@ Instructions for how to get a copy of the project running on your local machine.
 val nav_version = "2.5.1"
 
 Project:
+apply plugin: "kotlin-parcelize"
+
 classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
 Module:
@@ -24,6 +26,8 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 }
 
 buildFeatures {
