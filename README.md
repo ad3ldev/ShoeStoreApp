@@ -13,7 +13,22 @@ Instructions for how to get a copy of the project running on your local machine.
 ### Dependencies
 
 ```
-Examples here
+val nav_version = "2.5.1"
+
+Project:
+classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+Module:
+dependencies {
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+}
+
+buildFeatures {
+    dataBinding true
+}
 ```
 
 ### Installation
@@ -37,6 +52,7 @@ Explain what each test does and why
 ```
 Examples here
 ```
+
 ## Project Instructions
 
 This section should contain all the student deliverables for this project.
