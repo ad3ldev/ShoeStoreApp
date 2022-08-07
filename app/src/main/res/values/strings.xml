@@ -12,4 +12,6 @@
     <string name="instruction_text">How to use the app</string>
     <string name="instructions_details">BLA BLA BLA</string>
     <string name="instructions_button">Shoe List</string>
+    <string name="add_show_hint">Add a shoe</string>
+    <string name="shoe_list_scroll_hint">A scrollable list of shoes</string>
 </resources>

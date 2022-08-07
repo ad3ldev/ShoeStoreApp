@@ -2,11 +2,9 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/instructions_title"
             style="@style/title"
@@ -19,7 +17,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/instruction_details"
             style="@style/details"
@@ -29,7 +26,6 @@
             app:layout_constraintEnd_toEndOf="@+id/instructions_title"
             app:layout_constraintStart_toStartOf="@+id/instructions_title"
             app:layout_constraintTop_toBottomOf="@+id/instructions_title" />
-
         <Button
             android:id="@+id/instructions_button"
             style="@style/button"
@@ -42,5 +38,4 @@
             app:layout_constraintTop_toBottomOf="@+id/instruction_details"
             app:layout_constraintVertical_bias="0.19" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>
