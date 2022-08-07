@@ -11,40 +11,31 @@
         tools:layout_editor_absoluteY="55dp">
 
         <TextView
-            android:id="@+id/welcome_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginEnd="88dp"
+            android:id="@+id/welcome_title"
             android:text="@string/welcome_text"
-            android:textAlignment="center"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/title" />
 
         <TextView
             android:id="@+id/welcome_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="@string/welcome_details"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@+id/welcome_text"
-            app:layout_constraintStart_toStartOf="@+id/welcome_text"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+            app:layout_constraintEnd_toEndOf="@+id/welcome_title"
+            app:layout_constraintStart_toStartOf="@+id/welcome_title"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_title"
+            style="@style/details" />
 
         <Button
-            android:id="@+id/button_instructions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/welcome_button"
+            style="@style/button"
             android:text="@string/instructions_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/welcome_details"
-            app:layout_constraintVertical_bias="0.22000003" />
+            app:layout_constraintVertical_bias="0.19999999" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
