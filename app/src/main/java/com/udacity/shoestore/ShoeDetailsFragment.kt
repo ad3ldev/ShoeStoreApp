@@ -24,17 +24,20 @@ class ShoeDetailsFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
         binding.viewModel = viewModel
         binding.addButton.setOnClickListener {
-            if (validateSize()) {
-                viewModel.shoe.size = binding.addShoeSize.text.toString().toDouble()
-            }
-            if (validateName() && validateDetails() && validateCompany() && validateSize()) {
+            try {
+                try{
+                    viewModel.shoe.size = binding.addShoeSize.text.toString().toDouble()
+                }catch (e:Exception){
+                    viewModel.shoe.size = 0.0
+                }
+                viewModel.validate()
                 viewModel.addToShoeList()
                 findNavController().popBackStack()
-            } else {
+            } catch (e: Exception) {
                 val builder: AlertDialog.Builder? = activity?.let {
                     AlertDialog.Builder(it)
                 }
-                builder?.setMessage(R.string.invalid_input)
+                builder?.setMessage(e.message)
                     ?.setTitle("Invalid Input")
                 val dialog: AlertDialog? = builder?.create()
                 dialog?.show()
@@ -44,34 +47,7 @@ class ShoeDetailsFragment : Fragment() {
             viewModel.clearShoe()
             findNavController().popBackStack()
         }
+        viewModel.clearShoe()
         return binding.root
-    }
-
-    private fun validateSize(): Boolean {
-        if (binding.addShoeSize.text.isBlank()) {
-            return false
-        }
-        return true
-    }
-
-    private fun validateDetails(): Boolean {
-        if (binding.addShoeDetails.text.isBlank()) {
-            return false
-        }
-        return true
-    }
-
-    private fun validateCompany(): Boolean {
-        if (binding.addShoeCompany.text.isBlank()) {
-            return false
-        }
-        return true
-    }
-
-    private fun validateName(): Boolean {
-        if (binding.addShoeName.text.isBlank()) {
-            return false
-        }
-        return true
     }
 }
