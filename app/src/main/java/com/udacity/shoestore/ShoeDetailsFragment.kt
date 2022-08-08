@@ -27,13 +27,15 @@ class ShoeDetailsFragment : Fragment() {
             try {
                 try{
                     viewModel.shoe.size = binding.addShoeSize.text.toString().toDouble()
-                }catch (e:Exception){
+                }
+                catch (e:Exception){
                     viewModel.shoe.size = 0.0
                 }
                 viewModel.validate()
                 viewModel.addToShoeList()
                 findNavController().popBackStack()
-            } catch (e: Exception) {
+            }
+            catch (e: Exception) {
                 val builder: AlertDialog.Builder? = activity?.let {
                     AlertDialog.Builder(it)
                 }
