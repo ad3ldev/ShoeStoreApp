@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +24,7 @@ class ShoeDetailsFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_details, container, false)
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
         binding.viewModel = viewModel
+        (activity as AppCompatActivity)?.supportActionBar?.show()
         binding.addButton.setOnClickListener {
             try {
                 try{
