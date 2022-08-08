@@ -15,4 +15,9 @@
     <string name="add_show_hint">Add a shoe</string>
     <string name="shoe_list_scroll_hint">A scrollable list of shoes</string>
     <string name="shoe_image_hint">Shoe Image</string>
+    <string name="shoe_details_hint">Enter Shoe Details</string>
+    <string name="shoe_size_hint">Enter Shoe Size</string>
+    <string name="choose_a_shoe_image_hint">Choose a Shoe Image</string>
+    <string name="add_shoe_name_hint">Enter Shoe Model</string>
+    <string name="add_shoe_company_hint">Enter Shoe Company</string>
 </resources>
