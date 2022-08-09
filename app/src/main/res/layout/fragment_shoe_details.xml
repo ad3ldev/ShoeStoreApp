@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -16,18 +17,23 @@
         <ImageView
             android:id="@+id/choose_shoe_image"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="250dp"
             android:contentDescription="@string/choose_a_shoe_image_hint"
+            app:layout_constraintBottom_toTopOf="@+id/add_shoe_name"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:layout_constraintVertical_bias="0.003"
+            app:srcCompat="@drawable/shoe_01"
+            android:onClick="@{()->viewModel.changePicture()}"/>
+
         <EditText
             android:id="@+id/add_shoe_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/add_shoe_name_hint"
@@ -36,7 +42,6 @@
             android:text="@={viewModel.shoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/add_shoe_company"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/choose_shoe_image" />
 
@@ -44,14 +49,15 @@
             android:id="@+id/add_shoe_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/shoe_size_hint"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/add_button"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_shoe_details" />
 
@@ -59,6 +65,8 @@
             android:id="@+id/add_shoe_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:autofillHints=""
             android:ems="10"
             android:gravity="start|top"
@@ -68,7 +76,6 @@
             android:text="@={viewModel.shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/add_shoe_size"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_shoe_company" />
 
@@ -76,6 +83,8 @@
             android:id="@+id/add_shoe_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/add_shoe_company_hint"
@@ -84,32 +93,33 @@
             android:text="@={viewModel.shoe.company}"
             app:layout_constraintBottom_toTopOf="@+id/add_shoe_details"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_shoe_name" />
 
         <Button
             android:id="@+id/add_button"
+            style="@style/buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             android:contentDescription="@string/add_button"
             android:text="@string/add_button"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cancel_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/cancel_button" />
 
         <Button
             android:id="@+id/cancel_button"
+            style="@style/buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/cancel_button"
             android:text="@string/cancel_button"
-            app:layout_constraintBaseline_toBaselineOf="@+id/add_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/add_button"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_shoe_size" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -7,12 +7,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.40"
+            android:contentDescription="@string/login_background"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/login_background" />
+
         <TextView
             android:id="@+id/email_label"
+            style="@style/labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:text="@string/email"
+            android:textColor="@android:color/black"
             app:layout_constraintBaseline_toBaselineOf="@+id/emai_field"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -26,6 +43,7 @@
             android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
+            android:textColor="@android:color/black"
             app:layout_constraintBottom_toTopOf="@+id/password_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/email_label"
@@ -34,11 +52,10 @@
 
         <TextView
             android:id="@+id/password_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/password"
             app:layout_constraintBaseline_toBaselineOf="@+id/password_field"
-            app:layout_constraintStart_toStartOf="@+id/email_label" />
+            app:layout_constraintStart_toStartOf="@+id/email_label"
+            style="@style/labels" />
 
         <EditText
             android:id="@+id/password_field"
@@ -48,6 +65,7 @@
             android:hint="@string/password_hint"
             android:inputType="textPassword"
             android:minHeight="48dp"
+            android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/emai_field"
             app:layout_constraintStart_toStartOf="@+id/emai_field"
@@ -55,18 +73,18 @@
 
         <Button
             android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/sign_in_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/sign_up_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_field"
-            app:layout_constraintVertical_bias="0.07999998" />
+            app:layout_constraintVertical_bias="0.07999998"
+            style="@style/buttons" />
 
         <Button
             android:id="@+id/sign_up_button"
+            style="@style/buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up_text"

@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeViewBinding
+import timber.log.Timber
 
 class ShoeListFragment : Fragment() {
     private lateinit var binding: FragmentShoeListBinding
@@ -32,7 +33,7 @@ class ShoeListFragment : Fragment() {
                 newShoe.shoeName.text = element.name
                 newShoe.shoeSize.text = element.size.toString()
                 newShoe.shoeCompany.text = element.company
-                newShoe.shoeImage.setImageResource(R.drawable.ic_launcher_background)
+                newShoe.shoeImage.setImageResource(element.index)
                 binding.linearLayout.addView(newShoe.root)
             }
         }
@@ -44,7 +45,6 @@ class ShoeListFragment : Fragment() {
         actionBar?.show()
         actionBar?.setDisplayHomeAsUpEnabled(false);
         setOnBackPressed()
-        setHasOptionsMenu(true)
         return binding.root
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

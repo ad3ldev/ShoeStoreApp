@@ -10,7 +10,10 @@
     <string name="welcome_details">Welcome to our simple android app for a shoe store inventory :)</string>
     <string name="instructions_text">Instructions</string>
     <string name="instruction_text">How to use the app</string>
-    <string name="instructions_details">BLA BLA BLA</string>
+    <string name="instructions_details">The App shows a list of shoes that you have added.\n\n
+        You press the floating button in the Shoe List Screen to add a shoe.\n\n
+        You have to enter the model/name of the shoe, the company that made the shoe, some details about the shoe and
+        finally the size of the shoe.</string>
     <string name="instructions_button">Shoe List</string>
     <string name="add_show_hint">Add a shoe</string>
     <string name="shoe_list_scroll_hint">A scrollable list of shoes</string>
@@ -24,4 +27,5 @@
     <string name="cancel_button">Cancel</string>
     <string name="invalid_input">Please make sure all fields have valid input</string>
     <string name="logout_menu">Logout</string>
+    <string name="login_background">Login background Image</string>
 </resources>

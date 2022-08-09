@@ -6,6 +6,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_shoe_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/add_show_hint"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shoe_list_scroll"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_add" />
+
         <ScrollView
             android:id="@+id/shoe_list_scroll"
             android:layout_width="match_parent"
@@ -24,23 +42,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
         </ScrollView>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/add_shoe_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:contentDescription="@string/add_show_hint"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/shoe_list_scroll"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/ic_add"
-            android:focusable="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

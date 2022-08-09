@@ -23,6 +23,7 @@
         <item name="android:layout_marginEnd">88dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="details">
@@ -30,11 +31,21 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
-    <style name="button">
+    <style name="labels">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="buttons">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

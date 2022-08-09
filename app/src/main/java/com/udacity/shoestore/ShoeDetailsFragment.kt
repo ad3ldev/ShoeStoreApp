@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailsBinding
+
 
 class ShoeDetailsFragment : Fragment() {
     lateinit var binding: FragmentShoeDetailsBinding
@@ -52,6 +54,10 @@ class ShoeDetailsFragment : Fragment() {
             findNavController().popBackStack()
         }
         viewModel.clearShoe()
+        viewModel.shoeIndex.observe(viewLifecycleOwner, Observer { getImage()})
         return binding.root
+    }
+    fun getImage() {
+        binding.chooseShoeImage.setImageResource(viewModel.getImage())
     }
 }
