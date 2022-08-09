@@ -31,7 +31,11 @@ buildFeatures {
 }
 ```
 
-## Screenshots from the project
+## Program Flow
+
+![gif of flow](screenshots/gif.gif)
+
+## Screenshots
 
 ![screenshot 1](screenshots/1.jpg)
 ![screenshot 2](screenshots/2.jpg)
