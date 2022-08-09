@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout to have the floating action button always be in the bottom left corner of the screen
+and a linear layout such that each shoe object gets stacked over the other-->
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">

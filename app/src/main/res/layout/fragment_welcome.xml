@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout was used to center the elements first then add a vertical bias to it
+ so it goes in the bottom third of the screen-->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

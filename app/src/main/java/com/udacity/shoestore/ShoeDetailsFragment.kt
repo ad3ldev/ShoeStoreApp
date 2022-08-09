@@ -29,12 +29,6 @@ class ShoeDetailsFragment : Fragment() {
         (activity as AppCompatActivity)?.supportActionBar?.show()
         binding.addButton.setOnClickListener {
             try {
-                try{
-                    viewModel.shoe.size = binding.addShoeSize.text.toString().toDouble()
-                }
-                catch (e:Exception){
-                    viewModel.shoe.size = 0.0
-                }
                 viewModel.validate()
                 viewModel.addToShoeList()
                 findNavController().popBackStack()

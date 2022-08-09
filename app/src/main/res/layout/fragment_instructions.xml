@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout was used to help the text and button to always be in the center of the screen
+ and to have them be chained together to create the desired looks-->
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/instructions_title"
             style="@style/title"
